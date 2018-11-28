@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+        <!--TODO: Crear los menus de productos que aparecen en sale (attributes, attributes Values,
+        Units o Measure, Comp. Fabric, Tag Fabric Care), crear en settings las opciones
+        Products (Product Variants, Units of Measure) Pricing (Sale Price)
+
+        TODO: Create the product menus that appear in sale (attributes, attributes Values,
+         Units or Measure, Comp. Fabric, Tag Fabric Care), create settings in the options
+         Products (Product Variants, Units of Measure) Pricing (Sale Price)-->
+
+
+</odoo>

@@ -1,0 +1,37 @@
+.list-inline-image {
+  display: inline-block;
+}
+
+.o_field_image {
+  margin: 5px 20px;
+}
+
+.o_field_image img {
+  max-height: 80px;
+}
+
+.o_field_list_image img {
+  max-height: 30px;
+}
+.o_field_image input {
+  display: none;
+}
+
+.css_attribute_color {
+
+  border: 0;
+  outline: 1px solid #999999;
+
+  &.active {
+    outline: 5px solid #d58c1f;
+    border: 0px;
+  }
+
+  &.custom_value {
+        background-image: linear-gradient(to bottom right, #FF0000, #FFF200, #1E9600);
+    }
+}
+
+label.css_attribute_color.css_not_available {
+    display: none;
+}

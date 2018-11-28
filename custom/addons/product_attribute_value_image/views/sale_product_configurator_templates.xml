@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="assets_backend" name="tree icon assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel='stylesheet' type="text/scss"
+                  href="/product_attribute_value_image/static/src/scss/attribute_image.scss"/>
+        </xpath>
+    </template>
+
+    <template id="variants" inherit_id="sale.variants">
+        <xpath expr="//t[@t-if][3]" position="before">
+            <t t-if="variant_id.attribute_id.type == 'image'">
+                <ul t-att-data-attribute_id="variant_id.attribute_id.id" class="list-inline">
+                    <t t-set="inc" t-value="0"/>
+                    <div>
+                        <li t-foreach="variant_id.product_template_value_ids" t-as="value_id" t-attf-class="list-inline-image">
+                            <label t-attf-class="css_attribute_color #{'active' if not inc else ''} #{'custom_value' if value_id.is_custom else ''} o_field_image">
+                                <span t-field="value_id.image"
+                                      t-options='{"widget": "image", "alt-field": "name"}'>
+                                </span>
+                                <input type="radio"
+                                       t-attf-class="js_variant_change  #{variant_id.attribute_id.create_variant}"
+                                       t-att-checked="'checked' if not inc else None"
+                                       t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)"
+                                       t-att-value="value_id.id"
+                                       t-att-title="value_id.name"
+                                       t-att-data-value_id="value_id.product_attribute_value_id.id"
+                                       t-att-data-value_name="value_id.name"
+                                       t-att-data-attribute_name="value_id.attribute_id.name"
+                                       t-att-data-is_custom="value_id.is_custom"/>
+
+                            </label>
+                            <t t-set="inc" t-value="inc+1"/>
+                        </li>
+                    </div>
+                </ul>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
