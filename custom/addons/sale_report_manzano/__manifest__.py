@@ -4,7 +4,7 @@
     'description': 'Módulo Personalización Informes Manzanodecora',
     'version': '12.0.1.0.0',
     'author': 'Amaro Pesquero',
-    'depends': ['account', 'sale', 'payment_signal', 'custom_partner_manzano', ],
+    'depends': ['account', 'sale', 'payment_signal', 'custom_partner', ],
     'data': [
         'views/ins_external_layout_footer.xml',
         'views/ins_external_layout_header.xml',
