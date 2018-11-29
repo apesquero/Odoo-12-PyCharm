@@ -1,1 +1,3 @@
-from . import ins_account_invoice
+# -*- coding: utf-8 -*-
+
+from . import sale_report

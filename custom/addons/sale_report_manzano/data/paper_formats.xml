@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="paperformat_euro_portrait_ins" model="report.paperformat">
-        <field name="name">European A4 (No margin)</field>
+    <record id="paperformat_manzano" model="report.paperformat">
+        <field name="name">A4(Manzano)</field>
+        <field name="default" eval="True"/>
         <field name="format">A4</field>
         <field name="page_height">0</field>
         <field name="page_width">0</field>
@@ -15,11 +16,11 @@
         <field name="dpi">90</field>
     </record>
 
-    <record id="account.account_invoices" model="ir.actions.report.xml">
-        <field name="paperformat_id" ref="custom_report_manzano.paperformat_euro_portrait_ins"/>
-    </record>
+    <!--<record id="account.account_invoices" model="ir.actions.report">-->
+        <!--<field name="paperformat_id" ref="sale_report_manzano.paperformat_manzano"/>-->
+    <!--</record>-->
 
-    <record id="sale.report_sale_order" model="ir.actions.report.xml">
-        <field name="paperformat_id" ref="custom_report_manzano.paperformat_euro_portrait_ins"/>
-    </record>
+    <!--<record id="sale.report_sale_order" model="ir.actions.report">-->
+        <!--<field name="paperformat_id" ref="sale_report_manzano.paperformat_manzano"/>-->
+    <!--</record>-->
 </odoo>
