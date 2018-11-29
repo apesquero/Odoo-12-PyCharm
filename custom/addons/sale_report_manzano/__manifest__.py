@@ -15,6 +15,6 @@
         'views/ins_report_saleorder.xml',
         'data/paper_formats.xml', ],
     'category': 'Sales',
-    'installable': True,
+    'installable': False,
     'application': False,
 }
