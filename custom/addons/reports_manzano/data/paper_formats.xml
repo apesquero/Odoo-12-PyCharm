@@ -17,10 +17,10 @@
     </record>
 
     <!--<record id="account.account_invoices" model="ir.actions.report">-->
-        <!--<field name="paperformat_id" ref="sale_report_manzano.paperformat_manzano"/>-->
+        <!--<field name="paperformat_id" ref="reports_manzano.paperformat_manzano"/>-->
     <!--</record>-->
 
     <!--<record id="sale.report_sale_order" model="ir.actions.report">-->
-        <!--<field name="paperformat_id" ref="sale_report_manzano.paperformat_manzano"/>-->
+        <!--<field name="paperformat_id" ref="reports_manzano.paperformat_manzano"/>-->
     <!--</record>-->
 </odoo>

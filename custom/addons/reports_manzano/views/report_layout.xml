@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="report_layout_manzano" model="report.layout">
+            <field name="view_id" ref="reports_manzano.external_layout_manzano"/>
+            <field name="image">/reports_manzano/static/src/img/preview_manzano.png</field>
+            <field name="pdf">/reports_manzano/static/src/img/preview_manzano.pdf</field>
+        </record>
+    </data>
+</odoo>
