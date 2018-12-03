@@ -9,6 +9,7 @@
         'views/report_templates.xml',
         'views/report_layout.xml',
         'views/report_saleorder.xml',
+        # 'views/sale_report.xml',
         'data/paper_formats.xml',
     ],
     'category': 'Sales',
