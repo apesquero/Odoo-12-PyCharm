@@ -6,11 +6,11 @@
     'author': 'Amaro Pesquero',
     'depends': ['web', 'account', 'sale', 'payment_signal', 'custom_partner', ],
     'data': [
+        'data/paper_formats.xml',
         'views/report_templates.xml',
         'views/report_layout.xml',
         'views/report_saleorder.xml',
-        # 'views/sale_report.xml',
-        'data/paper_formats.xml',
+        'report/sale_report_templates.xml',
     ],
     'category': 'Sales',
     'installable': True,

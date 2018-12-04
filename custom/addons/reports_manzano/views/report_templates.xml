@@ -8,30 +8,25 @@
                 </div>
             </div>
 
-            <div class="o_background_header">
-                <div class="row">
-                    <div class="title col-6">
-                        <span t-if="doc.state in ['draft','sent']">QUOTATION</span>
-                        <span t-if="doc.state in ['acepted','sale']">ORDER</span>
-                    </div>
+            <!--<div class="o_background_header">-->
+                <!--<div class="row">-->
+                    <!--<div class="float-right text-right company_address col-12">-->
+                        <!--<div>-->
+                            <!--<strong t-field="company.partner_id.name"/>-->
+                        <!--</div>-->
+                        <!--<span t-field="company.partner_id"-->
+                              <!--t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>-->
+                    <!--</div>-->
+                <!--</div>-->
 
-                    <div class="float-right text-right company_address col-6">
-                        <div>
-                            <strong t-field="company.partner_id.name"/>
-                        </div>
-                        <span t-field="company.partner_id"
-                              t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
-                    </div>
-                </div>
+                <!--<div class="clearfix mb8"/>-->
 
-                <div class="clearfix mb8"/>
-
-            </div>
+            <!--</div>-->
         </div>
 
         <div class="article o_report_layout_background" t-att-data-oe-model="o and o._name"
              t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-            <t t-call="web.address_layout"/>
+            <!--<t t-call="web.address_layout"/>-->
             <t t-raw="0"/>
         </div>
 
@@ -56,6 +51,16 @@
                         <span t-field="company.vat"/>
                     </li>
                 </ul>
+                <ul class="list-inline">
+                    <li t-if="company.partner_id.name">
+                        <strong t-field="company.partner_id.name"/>
+                    </li>
+                    <li t-if="company.partner_id">
+                        <span t-field="company.partner_id"
+                              t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+                    </li>
+                </ul>
+
                 <div t-field="company.report_footer"/>
                 <div t-if="report_type == 'pdf'" class="text-muted">
                     Page:

@@ -1,3 +1,8 @@
+.o_report_layout_background {
+    background-image: url(/reports_manzano/static/src/img/background_manzano.jpg);
+    background-position-y: bottom;
+}
+
 .header_img img {
     margin-top:40px;
     width:100%;
@@ -14,11 +19,6 @@
 
     margin-bottom: 0px;
     height: 75px;
-}
-
-#informations {
-    border: 1px solid grey;
-    padding: 0px;
 }
 
 #informations_partner {
