@@ -1,26 +1,3 @@
-.o_report_layout_background {
-    background-image: url(/reports_manzano/static/src/img/background_manzano.jpg);
-    background-position-y: bottom;
-}
-
-.header_img img {
-    margin-top:40px;
-    width:100%;
-    box-shadow: #ccc 0px 0px 10px 0px;
-}
-
-.o_background_header {
-    margin: 10px 0;
-}
-
-.title {
-    font: normal 700 60px 'Open Sans';
-    color: grey;
-
-    margin-bottom: 0px;
-    height: 75px;
-}
-
 #informations_partner {
     border: 1px solid grey;
     border-top: none;

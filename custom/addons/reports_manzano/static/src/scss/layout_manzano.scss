@@ -1,0 +1,90 @@
+.o_manzano_footer, .o_manzano_header, .o_report_layout_manzano {
+  font-family: 'Lato';
+  font-size: 14px;
+  color: gray('700');
+}
+
+.header_img img {
+  margin-top: 40px;
+  width: 100%;
+  box-shadow: #ccc 0px 0px 10px 0px;
+}
+
+.o_background_header {
+  margin: 10px 0;
+}
+
+.title {
+    font: normal 700 60px 'Open Sans';
+    color: grey;
+
+    margin-bottom: 0px;
+    height: 75px;
+}
+
+.o_manzano_header {
+  min-width: 900px;
+  border-bottom: 1px solid gray('200');
+  img {
+    max-height: 96px;
+    max-width: 200px;
+    margin-right: 16px;
+  }
+  h3 {
+    color: $o-brand-odoo;
+    font-weight: 700;
+    font-size: 1.25rem;
+    max-width: 300px;
+  }
+}
+
+.o_manzano_footer {
+  ul {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    padding: 4px 0;
+    margin: 0 0 4px 0;
+    li {
+      color: $o-brand-odoo;
+    }
+  }
+}
+
+.o_report_layout_manzano {
+  background-image: url(/reports_manzano/static/src/img/background_manzano.jpg);
+  background-position-y: bottom;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  min-height: 620px;
+  thead tr th, h2 {
+    color: $o-brand-odoo;
+  }
+  tbody {
+    color: gray('700');
+    tr:nth-child(odd) {
+      background-color: rgba(220, 205, 216, 0.2);
+    }
+    tr td {
+      border-top: none;
+    }
+  }
+  /*Total table*/
+  .row > .col-4 > table {
+    tr:nth-child(odd) {
+      background-color: transparent !important;
+    }
+    tr:first-child td {
+      /*we could get rid of this rule if .border-black td would be terminated in report.scss*/
+      border-top: none !important;
+    }
+    tr:last-child td {
+      color: $o-brand-odoo;
+    }
+  }
+  #total {
+    table tr:last-child td {
+      border-bottom: 1px solid black;
+    }
+  }
+}

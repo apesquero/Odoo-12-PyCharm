@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <template id="external_layout_manzano">
+        <t t-call="web._assets_primary_variables"/>
         <div class="header">
             <div class="row">
                 <div class="col-md-12 header_img">
                     <img src="/reports_manzano/static/src/img/header_invoice.jpg"/>
                 </div>
             </div>
-
-            <!--<div class="o_background_header">-->
-                <!--<div class="row">-->
-                    <!--<div class="float-right text-right company_address col-12">-->
-                        <!--<div>-->
-                            <!--<strong t-field="company.partner_id.name"/>-->
-                        <!--</div>-->
-                        <!--<span t-field="company.partner_id"-->
-                              <!--t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <!--<div class="clearfix mb8"/>-->
-
-            <!--</div>-->
         </div>
 
-        <div class="article o_report_layout_background" t-att-data-oe-model="o and o._name"
+        <div class="article o_report_layout_manzano" t-att-data-oe-model="o and o._name"
              t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
             <!--<t t-call="web.address_layout"/>-->
             <t t-raw="0"/>
         </div>
 
-        <div class="footer o_background_footer">
+        <div class="footer o_manzano_footer">
             <div class="text-center">
                 <ul class="list-inline">
+                    <li t-if="company.partner_id.name" class="list-inline-item">
+                        <strong t-field="company.partner_id.name"/>
+                    </li>
+                    <li t-if="company.vat" class="list-inline-item">
+                        <i class="fa fa-building-o" role="img" aria-label="Fiscal number"/>
+                        <t t-esc="company.country_id.vat_label or 'Tax ID'"/>:
+                        <span t-field="company.vat"/>
+                    </li>
+                    <li t-if="company.partner_id.street" class="list-inline-item">
+                        <span t-field="company.partner_id.street"/>
+                    </li>
+                    <li t-if="company.partner_id.city" class="list-inline-item">
+                        <span t-field="company.partner_id.city"/>
+                    </li>
+                    <li t-if="company.partner_id.state_id" class="list-inline-item">
+                        <span t-field="company.partner_id.state_id"/>
+                    </li>
+                    <li t-if="company.partner_id.zip" class="list-inline-item">
+                        <span t-field="company.partner_id.zip"/>
+                    </li>
+                    <li t-if="company.partner_id.country_id" class="list-inline-item">
+                        <span t-field="company.partner_id.country_id"/>
+                    </li>
                     <li t-if="company.phone" class="list-inline-item">
                         <i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/>
                         <span t-field="company.phone"/>
@@ -44,20 +53,6 @@
                     <li t-if="company.website" class="list-inline-item">
                         <i class="fa fa-globe" role="img" aria-label="Website" title="Website"/>
                         <span t-field="company.website"/>
-                    </li>
-                    <li t-if="company.vat" class="list-inline-item">
-                        <i class="fa fa-building-o" role="img" aria-label="Fiscal number"/>
-                        <t t-esc="company.country_id.vat_label or 'Tax ID'"/>:
-                        <span t-field="company.vat"/>
-                    </li>
-                </ul>
-                <ul class="list-inline">
-                    <li t-if="company.partner_id.name">
-                        <strong t-field="company.partner_id.name"/>
-                    </li>
-                    <li t-if="company.partner_id">
-                        <span t-field="company.partner_id"
-                              t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
                     </li>
                 </ul>
 

@@ -10,8 +10,7 @@
                 <t t-if="env.context.get('proforma', False) or is_pro_forma">
                     <span class="title text-uppercase">Pro-Forma Invoice #</span>
                 </t>
-                <span class="title text-uppercase"
-                      t-field="doc.name"/>
+                <span t-field="doc.name" class="title text-uppercase"/>
             </h2>
         </xpath>
 

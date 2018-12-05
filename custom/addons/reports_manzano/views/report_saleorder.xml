@@ -2,14 +2,28 @@
 <odoo>
     <template id="ins_report_layouts" inherit_id="web.report_assets_pdf">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" href="/reports_manzano/static/src/css/reports_manzano.css"/>
+            <link rel="stylesheet"
+                  type="text/scss"
+                  href="/reports_manzano/static/src/scss/primary_variables.scss"/>
+            <link rel="stylesheet"
+                  type="text/scss"
+                  href="/reports_manzano/static/src/scss/layout_manzano.scss"/>
+            <!--<link rel="stylesheet"-->
+                  <!--href="/reports_manzano/static/src/css/reports_manzano.css"/>-->
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet"/>
         </xpath>
     </template>
 
     <template id="ins_report_assets_common" inherit_id="web.report_assets_common">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" href="/reports_manzano/static/src/css/reports_manzano.css"/>
+            <link rel="stylesheet"
+                  type="text/scss"
+                  href="/reports_manzano/static/src/scss/primary_variables.scss"/>
+            <link rel="stylesheet"
+                  type="text/scss"
+                  href="/reports_manzano/static/src/scss/layout_manzano.scss"/>
+            <!--<link rel="stylesheet"-->
+                  <!--href="/reports_manzano/static/src/css/reports_manzano.css"/>-->
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet"/>
         </xpath>
     </template>
