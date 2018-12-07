@@ -8,8 +8,9 @@
             <link rel="stylesheet"
                   type="text/scss"
                   href="/reports_manzano/static/src/scss/layout_manzano.scss"/>
-            <!--<link rel="stylesheet"-->
-                  <!--href="/reports_manzano/static/src/css/reports_manzano.css"/>-->
+            <link rel="stylesheet"
+                  type="text/scss"
+                  href="/reports_manzano/static/src/scss/sale_report_templates_manzano.scss"/>
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet"/>
         </xpath>
     </template>
@@ -22,8 +23,9 @@
             <link rel="stylesheet"
                   type="text/scss"
                   href="/reports_manzano/static/src/scss/layout_manzano.scss"/>
-            <!--<link rel="stylesheet"-->
-                  <!--href="/reports_manzano/static/src/css/reports_manzano.css"/>-->
+            <link rel="stylesheet"
+                  type="text/scss"
+                  href="/reports_manzano/static/src/scss/sale_report_templates_manzano.scss"/>
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet"/>
         </xpath>
     </template>

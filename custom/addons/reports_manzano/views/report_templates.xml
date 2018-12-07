@@ -27,20 +27,9 @@
                         <t t-esc="company.country_id.vat_label or 'Tax ID'"/>:
                         <span t-field="company.vat"/>
                     </li>
-                    <li t-if="company.partner_id.street" class="list-inline-item">
-                        <span t-field="company.partner_id.street"/>
-                    </li>
-                    <li t-if="company.partner_id.city" class="list-inline-item">
-                        <span t-field="company.partner_id.city"/>
-                    </li>
-                    <li t-if="company.partner_id.state_id" class="list-inline-item">
-                        <span t-field="company.partner_id.state_id"/>
-                    </li>
-                    <li t-if="company.partner_id.zip" class="list-inline-item">
-                        <span t-field="company.partner_id.zip"/>
-                    </li>
-                    <li t-if="company.partner_id.country_id" class="list-inline-item">
-                        <span t-field="company.partner_id.country_id"/>
+                    <li t-if="company.website" class="list-inline-item">
+                        <i class="fa fa-globe" role="img" aria-label="Website" title="Website"/>
+                        <span t-field="company.website"/>
                     </li>
                     <li t-if="company.phone" class="list-inline-item">
                         <i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/>
@@ -49,10 +38,6 @@
                     <li t-if="company.email" class="list-inline-item">
                         <i class="fa fa-at" role="img" aria-label="Email" title="Email"/>
                         <span t-field="company.email"/>
-                    </li>
-                    <li t-if="company.website" class="list-inline-item">
-                        <i class="fa fa-globe" role="img" aria-label="Website" title="Website"/>
-                        <span t-field="company.website"/>
                     </li>
                 </ul>
 
