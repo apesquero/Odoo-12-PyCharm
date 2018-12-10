@@ -15,70 +15,78 @@
 
         <xpath expr="//div[@id='informations']" position="replace">
             <div class="container col-12" id="informations">
-                <div class="row">
-                    <div id="column_left" class="col-7">
-                    <div class="row">
-                        <div class="col-3 text-right">
-                            <strong>Number:</strong>
-                        </div>
-                        <div class="col-9 text-left">
-                            <span t-field="doc.name"/>
-                        </div>
-                    </div>
-
-                    <div t-if="doc.date_order" class="row">
-                        <div class="col-3 text-right">
-                            <strong>Date:</strong>
-                        </div>
-                        <div class="col-9 text-left">
-                            <span t-field="doc.date_order"/>
-                        </div>
-                    </div>
-
-                    <div t-if="doc.client_order_ref" class="row">
-                        <div class="col-3 text-right">
-                            <strong>Your Reference:</strong>
-                        </div>
-                        <div class="col-9 text-left">
-                            <span t-field="doc.client_order_ref"/>
-                        </div>
-                    </div>
-                </div>
-
-                    <div id="column_right" class="col-5">
-                    <div t-if="doc.user_id.name" class="row">
-                        <div class="col-3 text-right">
-                            <strong>Salesperson:</strong>
-                        </div>
-                        <div class="col-9 text-left">
-                            <span t-field="doc.user_id"/>
-                        </div>
-                    </div>
-                    <div t-if="doc.user_id.phone or doc.user_id.mobile" class="row">
-                        <div class="col-3 text-right">
-                            <strong>Phone:</strong>
-                        </div>
-                        <div class="col-9 text-left">
-                            <div t-if="doc.user_id.phone">
-                                <span class="fa fa-phone"/>
-                                <span t-field="doc.user_id.phone"/>
+                <div class="container row">
+                    <div id="column_left" class="col-6">
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>Number:</strong>
                             </div>
-                            <div t-if="doc.user_id.mobile">
-                                <span class="fa fa-mobile"/>
-                                <span t-field="doc.user_id.mobile"/>
+                            <div class="col-9 text-left">
+                                <span t-field="doc.name"/>
                             </div>
                         </div>
 
+                        <div t-if="doc.date_order" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Date:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="doc.date_order"/>
+                            </div>
+                        </div>
+
+                        <div t-if="doc.client_order_ref" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Your Reference:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="doc.client_order_ref"/>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                    <div id="column_right" class="col-6">
+                        <div t-if="doc.user_id.name" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Salesperson:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="doc.user_id"/>
+                            </div>
+                        </div>
+                        <div t-if="doc.user_id.phone or doc.user_id.mobile" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Phone:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <div t-if="doc.user_id.phone">
+                                    <span class="fa fa-phone"/>
+                                    <span t-field="doc.user_id.phone"/>
+                                </div>
+                                <div t-if="doc.user_id.mobile">
+                                    <span class="fa fa-mobile"/>
+                                    <span t-field="doc.user_id.mobile"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div t-if="doc.user_id.email" class="row">
+                            <div class="col-3 text-right">
+                                <strong>E-mail:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <p class="email" t-field="doc.user_id.email"/>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
             <div class="container col-12" id="informations_partner">
-                <div class="row">
-                    <div id="column_left" class="col-7">
+                <div class="container row">
+                    <div id="column_left" class="col-6">
                         <div class="row">
                             <div class="col-3 text-right">
                                 <strong>Partner:</strong>
@@ -121,7 +129,7 @@
                         </div>
                     </div>
 
-                    <div id="column_right" class="col-5">
+                    <div id="column_right" class="col-6">
                         <div class="row">
                             <div class="col-3 text-right">
                                 <strong>Phone:</strong>
