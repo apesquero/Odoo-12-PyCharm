@@ -20,10 +20,15 @@
             <div class="text-center">
                 <ul class="list-inline">
                     <li t-if="company.partner_id.name" class="list-inline-item">
+                        <i class="fa fa-building-o" role="img" aria-label="Company" title="Company"/>
                         <strong t-field="company.partner_id.name"/>
                     </li>
+                    <li t-if="company.street" class="list-inline-item" style="white-space: nowrap;">
+                        <i class="fa fa-road" role="img" aria-label="Street" title="Street"/>
+                        <span t-field="company.street"/>
+                    </li>
                     <li t-if="company.vat" class="list-inline-item">
-                        <i class="fa fa-building-o" role="img" aria-label="Fiscal number"/>
+                        <i class="fa fa-legal" role="img" aria-label="Fiscal number" title="Fiscal number"/>
                         <t t-esc="company.country_id.vat_label or 'Tax ID'"/>:
                         <span t-field="company.vat"/>
                     </li>
@@ -39,6 +44,10 @@
                         <i class="fa fa-at" role="img" aria-label="Email" title="Email"/>
                         <span t-field="company.email"/>
                     </li>
+                    <!--<li t-if="company.report_footer" class="list-inline-item">-->
+                        <!--<i class="fa fa-at" role="img" aria-label="Count" title="Count"/>-->
+                        <!--<span t-field="company.report_footer"/>-->
+                    <!--</li>-->
                 </ul>
 
                 <div t-field="company.report_footer"/>

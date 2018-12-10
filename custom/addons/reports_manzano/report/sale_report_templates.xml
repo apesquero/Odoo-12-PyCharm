@@ -16,7 +16,7 @@
         <xpath expr="//div[@id='informations']" position="replace">
             <div class="container col-12" id="informations">
                 <div class="row">
-                    <div id="column_left" class="col-6">
+                    <div id="column_left" class="col-7">
                     <div class="row">
                         <div class="col-3 text-right">
                             <strong>Number:</strong>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-                    <div id="column_right" class="col-6">
+                    <div id="column_right" class="col-5">
                     <div t-if="doc.user_id.name" class="row">
                         <div class="col-3 text-right">
                             <strong>Salesperson:</strong>
@@ -74,6 +74,73 @@
 
                 </div>
 
+            </div>
+
+            <div class="container col-12" id="informations_partner">
+                <div class="row">
+                    <div id="column_left" class="col-7">
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>Partner:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <p class="name" t-field="doc.partner_id.name"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-right" t-if="doc.partner_id.vat">
+                                <strong>VAT:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="doc.partner_id.vat"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>Address:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <div>
+                                    <span t-field="doc.partner_id.street"/>
+                                    <span>-</span>
+                                    <span t-field="doc.partner_id.doorway"/>
+                                    <span t-if="doc.partner_id.doorway">-</span>
+                                    <span t-field="doc.partner_id.floor"/>
+                                    <span t-field="doc.partner_id.letter"/>
+                                    <span t-if="doc.partner_id.number_door">-</span>
+                                    <span t-field="doc.partner_id.number_door"/>
+                                    <span t-if="doc.partner_id.number_door" class="fa fa-bell"/>
+                                </div>
+                                <div>
+                                    <span t-field="doc.partner_id.zip"/>
+                                    <span t-field="doc.partner_id.city"/>
+                                    <span t-field="doc.partner_id.state_id"/>
+                                    <span t-field="doc.partner_id.country_id"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="column_right" class="col-5">
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>Phone:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <div t-field="doc.partner_id"
+                                     t-options='{"widget": "contact", "fields": ["phone", "mobile", "mobile2", "fax"], "no_marker": true, "phone_icons": true}'/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>E-mail:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <p class="email" t-field="doc.partner_id.email"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </xpath>
 
