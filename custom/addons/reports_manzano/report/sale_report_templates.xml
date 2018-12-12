@@ -110,9 +110,9 @@
                             <div class="col-9 text-left">
                                 <div>
                                     <span t-field="doc.partner_id.street"/>
-                                    <span>-</span>
-                                    <span t-field="doc.partner_id.doorway"/>
                                     <span t-if="doc.partner_id.doorway">-</span>
+                                    <span t-field="doc.partner_id.doorway"/>
+                                    <span t-if="doc.partner_id.floor or doc.partner_id.floor">-</span>
                                     <span t-field="doc.partner_id.floor"/>
                                     <span t-field="doc.partner_id.letter"/>
                                     <span t-if="doc.partner_id.number_door">-</span>
