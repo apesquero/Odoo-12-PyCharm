@@ -118,11 +118,13 @@
                                     <span t-if="doc.partner_id.number_door">-</span>
                                     <span t-field="doc.partner_id.number_door"/>
                                     <span t-if="doc.partner_id.number_door" class="fa fa-bell"/>
-                                </div>
-                                <div>
+                                    <span t-if="doc.partner_id.zip">-</span>
                                     <span t-field="doc.partner_id.zip"/>
+                                    <span t-if="doc.partner_id.city">-</span>
                                     <span t-field="doc.partner_id.city"/>
+                                    <span t-if="doc.partner_id.state_id">-</span>
                                     <span t-field="doc.partner_id.state_id"/>
+                                    <span t-if="doc.partner_id.country_id">-</span>
                                     <span t-field="doc.partner_id.country_id"/>
                                 </div>
                             </div>
