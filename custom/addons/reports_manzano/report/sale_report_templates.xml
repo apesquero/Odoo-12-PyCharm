@@ -77,11 +77,8 @@
                                 <p class="email" t-field="doc.user_id.email"/>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
             <div class="container col-12" id="informations_partner">

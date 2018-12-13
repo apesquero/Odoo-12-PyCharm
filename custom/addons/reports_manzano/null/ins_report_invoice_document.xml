@@ -181,7 +181,7 @@
 
                 <t t-set="display_discount" t-value="any([l.discount for l in doc.invoice_line_ids])"/>
 
-                <table class="table table-condensed" groups="!sale.group_sale_layou">
+                <table class="table table-condensed" groups="!sale.group_sale_layout">
                     <t groups="sale.group_sale_layout" t-foreach="doc.order_lines_layouted()" t-as="page">
                         <table class="table table-condensed">
                             <thead>

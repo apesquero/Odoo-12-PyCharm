@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="report_saleorder_document_manzano" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@name='total']/div" position="replace">
+            <div t-attf-class="#{'col-5' if report_type != 'html' else 'col-sm-5 col-md-5'}">
+                <table class="table table-sm">
+                    <tr class="border-black" style="border-bottom:1px solid #dddddd;">
+                        <td>
+                            <strong>Way to Pay</strong>
+                        </td>
+                        <td class="text-right">
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Rest to pay</span>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="doc.rest_pay"
+                                  t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                        </td>
+                    </tr>
+                    <tr class="border-black">
+                        <td>
+                            <strong class="signal" t-if="doc.state not in ['draft','sent']">Signal Order
+                            </strong>
+                            <strong class="signal" t-if="doc.state in ['draft','sent']">Signal Quotation
+                            </strong>
+                        </td>
+                        <td class="text-right">
+                            <span class="signal"
+                                  t-field="doc.payment_signal"
+                                  t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div t-attf-class="#{'col-7' if report_type != 'html' else 'col-sm-7 col-md-7'}">
+                <table class="table table-sm">
+                    <tr class="border-black" style="border-bottom:1px solid #dddddd;">
+                        <td>
+                            <strong>Subtotal</strong>
+                        </td>
+                        <td class="text-right">
+                            <span t-field="doc.amount_untaxed"/>
+                        </td>
+                    </tr>
+                    <t t-foreach="doc.amount_by_group" t-as="amount_by_group">
+                        <tr style="border-bottom:1px solid #dddddd;">
+                            <t t-if="amount_by_group[3] == 1 and doc.amount_untaxed == amount_by_group[2]">
+                                <td>
+                                    <span t-esc="amount_by_group[0]"/>
+                                    <span>&amp;nbsp;<span>on</span>&amp;nbsp;
+                                        <t t-esc="amount_by_group[2]"
+                                           t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                    </span>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="amount_by_group[1]"
+                                          t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                </td>
+                            </t>
+                            <t t-else="">
+                                <td>
+                                    <span t-esc="amount_by_group[0]"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="amount_by_group[1]"
+                                          t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                                </td>
+                            </t>
+                        </tr>
+                    </t>
+                    <tr class="border-black">
+                        <td>
+                            <strong class="amount_total"
+                                    t-if="doc.state not in ['draft','sent']">TOTAL ORDER (TAX INCLUDED)
+                            </strong>
+                            <strong class="amount_total"
+                                    t-if="doc.state in ['draft','sent']">TOTAL QUOTATION (TAX INCLUDED)
+                            </strong>
+                        </td>
+                        <td class="text-right">
+                            <span class="amount_total" t-field="doc.amount_total"
+                                  t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </xpath>
+    </template>
+</odoo>
