@@ -1,25 +1,8 @@
 <?xml version="1.0"?>
 <odoo>
-    <template id="report_saleorder_document_manzano" inherit_id="sale.report_saleorder_document">
+    <template id="report_saleorder_document_payment_signal" inherit_id="sale.report_saleorder_document">
         <xpath expr="//div[@name='total']/div" position="attributes">
             <attribute name="t-attf-class">#{'col-7' if report_type != 'html' else 'col-sm-7 col-md-7'}</attribute>
-        </xpath>
-
-        <xpath expr="//div[@name='total']//tr[2]" position="replace">
-            <tr class="border-black">
-                <td>
-                    <strong class="amount_total"
-                            t-if="doc.state not in ['draft','sent']">TOTAL ORDER (TAX INCLUDED)
-                    </strong>
-                    <strong class="amount_total"
-                            t-if="doc.state in ['draft','sent']">TOTAL QUOTATION (TAX INCLUDED)
-                    </strong>
-                </td>
-                <td class="text-right">
-                    <span class="amount_total" t-field="doc.amount_total"
-                          t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
-                </td>
-            </tr>
         </xpath>
 
         <xpath expr="//div[@name='total']/div" position="before">

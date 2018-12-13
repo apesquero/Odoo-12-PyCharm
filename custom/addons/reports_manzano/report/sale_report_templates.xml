@@ -151,5 +151,22 @@
             </div>
         </xpath>
 
+        <xpath expr="//div[@name='total']//tr[2]" position="replace">
+            <tr class="border-black">
+                <td>
+                    <strong class="amount_total text-uppercase"
+                            t-if="doc.state not in ['draft','sent']">Total Order (Tax Included)
+                    </strong>
+                    <strong class="amount_total text-uppercase"
+                            t-if="doc.state in ['draft','sent']">Total Quotation (Tax Included)
+                    </strong>
+                </td>
+                <td class="text-right">
+                    <span class="amount_total" t-field="doc.amount_total"
+                          t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                </td>
+            </tr>
+        </xpath>
+
     </template>
 </odoo>
