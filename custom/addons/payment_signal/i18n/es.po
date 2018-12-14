@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-26 09:17+0000\n"
-"PO-Revision-Date: 2017-12-26 09:17+0000\n"
+"POT-Creation-Date: 2018-12-14 16:45+0000\n"
+"PO-Revision-Date: 2018-12-14 16:45+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,39 +16,67 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: payment_signal
+#: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
+msgid "<span>Rest to pay</span>"
+msgstr "<span>Resto a pagar</span>"
+
+#. module: payment_signal
+#: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
+msgid "<strong>Way to Pay</strong>"
+msgstr "<strong>Forma de pago</strong>"
+
+#. module: payment_signal
 #: model:ir.model,name:payment_signal.model_res_company
 msgid "Companies"
 msgstr "Compañías"
 
 #. module: payment_signal
-#: code:addons/payment_signal/models/inherit_res_company.py:14
+#: selection:sale.advance.payment.inv,advance_payment_method:0
+msgid "Down payment (fixed amount)"
+msgstr "Depósito (cantidad fija)"
+
+#. module: payment_signal
+#: selection:sale.advance.payment.inv,advance_payment_method:0
+msgid "Down payment (percentage)"
+msgstr "Depósito (porcentaje)"
+
+#. module: payment_signal
+#: code:addons/payment_signal/models/inherit_res_company.py:18
 #, python-format
 msgid "Error! The Percent Signal in S.O. can not be less than 0 nor more than 100."
 msgstr "¡Error! El Porcentage de Señal en Pedido de venta no puede ser menor de 0 ni mayor de 100."
 
 #. module: payment_signal
-#: code:addons/payment_signal/models/inherit_sale_order.py:28
-#: code:addons/payment_signal/models/inherit_sale_order.py:55
+#: code:addons/payment_signal/models/inherit_sale_order.py:36
+#: code:addons/payment_signal/models/inherit_sale_order.py:57
 #, python-format
 msgid "Error! The payment signal can not be less than 0 nor more than total."
 msgstr "¡Error! El pago de la señal no puede ser menor de 0 ni mayor que el total."
 
 #. module: payment_signal
-#: code:addons/payment_signal/models/inherit_sale_order.py:37
-#: code:addons/payment_signal/models/inherit_sale_order.py:60
-#, python-format
-msgid "Error! The rest to pay can not be less than 0 nor more than total."
-msgstr "¡Error! El resto a pagar no puede ser menor de 0 ni mayor que el total."
+#: selection:sale.advance.payment.inv,advance_payment_method:0
+msgid "Invoiceable lines"
+msgstr "Líneas de factura"
 
 #. module: payment_signal
-#: model:ir.model.fields,field_description:payment_signal.field_res_company_default_signal
+#: selection:sale.advance.payment.inv,advance_payment_method:0
+msgid "Invoiceable lines (deduct down payments)"
+msgstr "Líneas a facturar (deducir pagos por adelantado)"
+
+#. module: payment_signal
+#: model:ir.model.fields,field_description:payment_signal.field_res_company__default_signal
 msgid "Percent Signal in S.O."
-msgstr "Porcentage de Señal en Pedido de venta"
+msgstr "Porcentaje Señal en Pedido"
 
 #. module: payment_signal
-#: model:ir.model.fields,field_description:payment_signal.field_sale_order_rest_pay
+#: model:ir.model.fields,field_description:payment_signal.field_sale_order__rest_pay
 msgid "Rest to pay"
 msgstr "Resto a pagar"
+
+#. module: payment_signal
+#: model:ir.model,name:payment_signal.model_sale_order
+msgid "Sale Order"
+msgstr "Pedido de venta"
 
 #. module: payment_signal
 #: model:ir.model,name:payment_signal.model_sale_advance_payment_inv
@@ -56,12 +84,18 @@ msgid "Sales Advance Payment Invoice"
 msgstr "Ventas. Anticipo pago factura"
 
 #. module: payment_signal
-#: model:ir.model,name:payment_signal.model_sale_order
-msgid "Sales Order"
-msgstr "Pedido de venta"
+#: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
+msgid "Signal Order"
+msgstr "Señal Pedido"
 
 #. module: payment_signal
-#: model:ir.model.fields,field_description:payment_signal.field_sale_order_payment_signal
+#: model:ir.model.fields,field_description:payment_signal.field_sale_order__payment_signal
+#: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
 msgid "Signal Quotation"
 msgstr "Señal Presupuesto"
+
+#. module: payment_signal
+#: model:ir.model.fields,field_description:payment_signal.field_sale_advance_payment_inv__advance_payment_method
+msgid "What do you want to invoice?"
+msgstr "¿Qué quiere facturar?"
 

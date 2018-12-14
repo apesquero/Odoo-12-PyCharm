@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 23:13+0000\n"
-"PO-Revision-Date: 2018-12-10 23:13+0000\n"
+"POT-Creation-Date: 2018-12-14 16:49+0000\n"
+"PO-Revision-Date: 2018-12-14 16:49+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<span class=\"title text-uppercase\">Pro-Forma Invoice</span>"
 msgstr "<span class=\"title text-uppercase\">Factura Pro-Forma</span>"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "<span>Disc.(%)</span>"
+msgstr "<span>Desc.(%)</span>"
 
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
@@ -58,12 +63,22 @@ msgstr "<strong>Comercial:</strong>"
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>VAT:</strong>"
-msgstr "<strong>CIF:</strong>"
+msgstr "<strong>CIF/NIF:</strong>"
 
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>Your Reference:</strong>"
 msgstr "<strong>Su Referencia:</strong>"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Amount"
+msgstr "Importe"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Description"
+msgstr "Descripción"
 
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
@@ -83,6 +98,36 @@ msgstr "Página:\n"
 
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "Quotation"
 msgstr "Presupuesto"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Total Order (Tax Included)"
+msgstr "Total Pedido (IVA Incluido)"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Total Price"
+msgstr "Precio total"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Total Quotation (Tax Included)"
+msgstr "Total Presupuesto (IVA Incluido)"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "Unit Price"
+msgstr "€/Und"
 

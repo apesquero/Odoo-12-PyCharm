@@ -80,7 +80,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="container col-12" id="informations_partner">
                 <div class="container row">
                     <div id="column_left" class="col-6">
@@ -106,23 +105,49 @@
                             </div>
                             <div class="col-9 text-left">
                                 <div>
-                                    <span t-field="doc.partner_id.street"/>
-                                    <span t-if="doc.partner_id.doorway">-</span>
-                                    <span t-field="doc.partner_id.doorway"/>
-                                    <span t-if="doc.partner_id.floor or doc.partner_id.floor">-</span>
-                                    <span t-field="doc.partner_id.floor"/>
-                                    <span t-field="doc.partner_id.letter"/>
-                                    <span t-if="doc.partner_id.number_door">-</span>
-                                    <span t-field="doc.partner_id.number_door"/>
-                                    <span t-if="doc.partner_id.number_door" class="fa fa-bell"/>
-                                    <span t-if="doc.partner_id.zip">-</span>
-                                    <span t-field="doc.partner_id.zip"/>
-                                    <span t-if="doc.partner_id.city">-</span>
-                                    <span t-field="doc.partner_id.city"/>
-                                    <span t-if="doc.partner_id.state_id">-</span>
-                                    <span t-field="doc.partner_id.state_id"/>
-                                    <span t-if="doc.partner_id.country_id">-</span>
-                                    <span t-field="doc.partner_id.country_id"/>
+                                    <span t-field="doc.partner_invoice_id.street"/>
+                                    <span t-if="doc.partner_invoice_id.doorway">-</span>
+                                    <span t-field="doc.partner_invoice_id.doorway"/>
+                                    <span t-if="doc.partner_invoice_id.floor or doc.partner_invoice_id.floor">-</span>
+                                    <span t-field="doc.partner_invoice_id.floor"/>
+                                    <span t-field="doc.partner_invoice_id.letter"/>
+                                    <span t-if="doc.partner_invoice_id.number_door">-</span>
+                                    <span t-field="doc.partner_invoice_id.number_door"/>
+                                    <span t-if="doc.partner_invoice_id.number_door" class="fa fa-bell"/>
+                                    <span t-if="doc.partner_invoice_id.zip">-</span>
+                                    <span t-field="doc.partner_invoice_id.zip"/>
+                                    <span t-if="doc.partner_invoice_id.city">-</span>
+                                    <span t-field="doc.partner_invoice_id.city"/>
+                                    <span t-if="doc.partner_invoice_id.state_id">-</span>
+                                    <span t-field="doc.partner_invoice_id.state_id"/>
+                                    <span t-if="doc.partner_invoice_id.country_id">-</span>
+                                    <span t-field="doc.partner_invoice_id.country_id"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" t-if="doc.partner_shipping_id != doc.partner_invoice_id">
+                            <div class="col-3 text-right">
+                                <strong>Shipping:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <div>
+                                    <span t-field="doc.partner_shipping_id.street"/>
+                                    <span t-if="doc.partner_shipping_id.doorway">-</span>
+                                    <span t-field="doc.partner_shipping_id.doorway"/>
+                                    <span t-if="doc.partner_shipping_id.floor or doc.partner_shipping_id.floor">-</span>
+                                    <span t-field="doc.partner_shipping_id.floor"/>
+                                    <span t-field="doc.partner_shipping_id.letter"/>
+                                    <span t-if="doc.partner_shipping_id.number_door">-</span>
+                                    <span t-field="doc.partner_shipping_id.number_door"/>
+                                    <span t-if="doc.partner_shipping_id.number_door" class="fa fa-bell"/>
+                                    <span t-if="doc.partner_shipping_id.zip">-</span>
+                                    <span t-field="doc.partner_shipping_id.zip"/>
+                                    <span t-if="doc.partner_shipping_id.city">-</span>
+                                    <span t-field="doc.partner_shipping_id.city"/>
+                                    <span t-if="doc.partner_shipping_id.state_id">-</span>
+                                    <span t-field="doc.partner_shipping_id.state_id"/>
+                                    <span t-if="doc.partner_shipping_id.country_id">-</span>
+                                    <span t-field="doc.partner_shipping_id.country_id"/>
                                 </div>
                             </div>
                         </div>
@@ -134,8 +159,17 @@
                                 <strong>Phone:</strong>
                             </div>
                             <div class="col-9 text-left">
-                                <div t-field="doc.partner_id"
-                                     t-options='{"widget": "contact", "fields": ["phone", "mobile", "mobile2", "fax"], "no_marker": true, "phone_icons": true}'/>
+                                <div t-if="doc.partner_id.phone">
+                                    <span class="fa fa-phone"/>
+                                    <span t-field="doc.partner_id.phone"/>
+                                </div>
+                                <div t-if="doc.partner_id.mobile">
+                                    <span class="fa fa-mobile"/>
+                                    <span t-field="doc.partner_id.mobile"/>
+                                    <span t-if="doc.partner_id.mobile2">-</span>
+                                    <span t-if="doc.partner_id.mobile2" class="fa fa-mobile"/>
+                                    <span t-field="doc.partner_id.mobile2"/>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
