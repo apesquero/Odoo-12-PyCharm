@@ -113,21 +113,10 @@ msgstr "Impuestos"
 
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
-msgid "Total Order (Tax Included)"
-msgstr "Total Pedido (IVA Incluido)"
+msgid "<strong>Total (Tax Included)</strong>"
+msgstr "<strong>Total (IVA Incluido)</strong>"
 
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "Total Price"
 msgstr "Precio total"
-
-#. module: reports_manzano
-#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
-msgid "Total Quotation (Tax Included)"
-msgstr "Total Presupuesto (IVA Incluido)"
-
-#. module: reports_manzano
-#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
-msgid "Unit Price"
-msgstr "€/Und"
-

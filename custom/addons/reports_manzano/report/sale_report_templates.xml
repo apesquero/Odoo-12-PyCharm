@@ -88,7 +88,7 @@
                                 <strong>Partner:</strong>
                             </div>
                             <div class="col-9 text-left">
-                                <p class="name" t-field="doc.partner_id.name"/>
+                                <span t-field="doc.partner_id.name"/>
                             </div>
                         </div>
                         <div class="row">
@@ -185,15 +185,18 @@
             </div>
         </xpath>
 
+        <xpath expr="//div[@class='page']//table/thead/tr/th[1]" position="attributes">
+            <attribute name="style">width: 65%;</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='page']//table/thead/tr/th[5]" position="replace"/>
+
+        <xpath expr="//tbody[@class='sale_tbody']//t/tr/t/td[5]" position="replace"/>
+
         <xpath expr="//div[@name='total']//tr[2]" position="replace">
             <tr class="border-black">
                 <td>
-                    <strong class="amount_total text-uppercase"
-                            t-if="doc.state not in ['draft','sent']">Total Order (Tax Included)
-                    </strong>
-                    <strong class="amount_total text-uppercase"
-                            t-if="doc.state in ['draft','sent']">Total Quotation (Tax Included)
-                    </strong>
+                    <strong class="amount_total text-uppercase">Total (Tax Included)</strong>
                 </td>
                 <td class="text-right">
                     <span class="amount_total" t-field="doc.amount_total"

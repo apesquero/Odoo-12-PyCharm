@@ -1,7 +1,19 @@
-.o_manzano_footer, .o_manzano_header, .o_report_layout_manzano {
+.o_manzano_header, .o_report_layout_manzano {
   font-family: 'Lato';
-  font-size: 14px;
+  font-size: 13px;
   color: gray('700');
+}
+
+.o_manzano_footer {
+  border-top: 1px solid gray('200');
+  font-size: 12px;
+  li {
+    white-space: nowrap;
+  }
+}
+
+.o_manzano_footer_caption {
+  font-size: 10px;
 }
 
 .header_img img {
@@ -15,9 +27,9 @@
 }
 
 .title {
-    font: normal 700 60px 'Open Sans';
-    color: grey;
-    margin-bottom: 0px;
+  font: normal 700 60px 'Open Sans';
+  color: grey;
+  margin-bottom: 0px;
 }
 
 .o_manzano_header {

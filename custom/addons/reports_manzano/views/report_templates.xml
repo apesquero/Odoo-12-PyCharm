@@ -18,14 +18,31 @@
 
         <div class="footer o_manzano_footer">
             <div class="text-center">
+                <div t-if="report_type == 'pdf'" class="text-muted">
+                    Page:
+                    <span class="page"/>
+                    of
+                    <span class="topage"/>
+                </div>
+
+
+
                 <ul class="list-inline">
                     <li t-if="company.partner_id.name" class="list-inline-item">
                         <i class="fa fa-building-o" role="img" aria-label="Company" title="Company"/>
                         <strong t-field="company.partner_id.name"/>
                     </li>
-                    <li t-if="company.street" class="list-inline-item" style="white-space: nowrap;">
+                    <li t-if="company.street" class="list-inline-item">
                         <i class="fa fa-road" role="img" aria-label="Street" title="Street"/>
                         <span t-field="company.street"/>
+                        <span>-</span>
+                        <span t-field="company.city"/>
+                        <span>-</span>
+                        <span t-field="company.state_id"/>
+                        <span>-</span>
+                        <span t-field="company.zip"/>
+                        <span>-</span>
+                        <span t-field="company.country_id"/>
                     </li>
                     <li t-if="company.vat" class="list-inline-item">
                         <i class="fa fa-legal" role="img" aria-label="Fiscal number" title="Fiscal number"/>
@@ -44,19 +61,10 @@
                         <i class="fa fa-at" role="img" aria-label="Email" title="Email"/>
                         <span t-field="company.email"/>
                     </li>
-                    <!--<li t-if="company.report_footer" class="list-inline-item">-->
-                        <!--<i class="fa fa-at" role="img" aria-label="Count" title="Count"/>-->
-                        <!--<span t-field="company.report_footer"/>-->
-                    <!--</li>-->
                 </ul>
 
-                <div t-field="company.report_footer"/>
-                <div t-if="report_type == 'pdf'" class="text-muted">
-                    Page:
-                    <span class="page"/>
-                    of
-                    <span class="topage"/>
-                </div>
+                <div class="o_manzano_footer_caption text-justify" t-field="company.report_footer"/>
+
             </div>
         </div>
     </template>
