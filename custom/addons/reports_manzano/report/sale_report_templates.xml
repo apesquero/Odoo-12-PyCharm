@@ -193,6 +193,8 @@
 
         <xpath expr="//tbody[@class='sale_tbody']//t/tr/t/td[5]" position="replace"/>
 
+        <!--TODO: Influye el orden de instalación, no se cómo hacerlo sin tener que copiar todo el "page"
+        y perder la herencia-->
         <xpath expr="//div[@name='total']//tr[2]" position="replace">
             <tr class="border-black">
                 <td>
