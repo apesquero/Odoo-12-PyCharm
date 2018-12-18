@@ -2,13 +2,13 @@
 <odoo>
     <template id="report_saleorder_document_manzano" inherit_id="sale.report_saleorder_document">
         <xpath expr="//div[@class='page']/h2" position="replace">
-            <h2>
+            <h2 class="title text-uppercase">
                 <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
-                    <span t-if="doc.state not in ['draft','sent']" class="title text-uppercase">Order</span>
-                    <span t-if="doc.state in ['draft','sent']" class="title text-uppercase">Quotation</span>
+                    <span t-if="doc.state not in ['draft','sent']">Order</span>
+                    <span t-if="doc.state in ['draft','sent']">Quotation</span>
                 </t>
                 <t t-if="env.context.get('proforma', False) or is_pro_forma">
-                    <span class="title text-uppercase">Pro-Forma Invoice</span>
+                    <span>Pro-Forma Invoice</span>
                 </t>
             </h2>
         </xpath>

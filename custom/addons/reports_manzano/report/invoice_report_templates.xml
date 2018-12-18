@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit_sale_manzano" inherit_id="account.report_invoice_document">
+        <xpath expr="//div/h2" position="attributes">
+            <attribute name="class">title text-uppercase</attribute>
+        </xpath>
+    </template>
+</odoo>
