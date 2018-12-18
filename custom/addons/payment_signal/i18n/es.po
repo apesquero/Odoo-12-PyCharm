@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-14 16:45+0000\n"
-"PO-Revision-Date: 2018-12-14 16:45+0000\n"
+"POT-Creation-Date: 2018-12-17 23:59+0000\n"
+"PO-Revision-Date: 2018-12-17 23:59+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,13 @@ msgstr ""
 
 #. module: payment_signal
 #: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
+#: model_terms:ir.ui.view,arch_db:payment_signal.sale_order_portal_content_payment_signal
 msgid "<span>Rest to pay</span>"
 msgstr "<span>Resto a pagar</span>"
 
 #. module: payment_signal
 #: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
+#: model_terms:ir.ui.view,arch_db:payment_signal.sale_order_portal_content_payment_signal
 msgid "<strong>Way to Pay</strong>"
 msgstr "<strong>Forma de pago</strong>"
 
@@ -85,12 +87,14 @@ msgstr "Ventas. Anticipo pago factura"
 
 #. module: payment_signal
 #: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
+#: model_terms:ir.ui.view,arch_db:payment_signal.sale_order_portal_content_payment_signal
 msgid "Signal Order"
 msgstr "Señal Pedido"
 
 #. module: payment_signal
 #: model:ir.model.fields,field_description:payment_signal.field_sale_order__payment_signal
 #: model_terms:ir.ui.view,arch_db:payment_signal.report_saleorder_document_payment_signal
+#: model_terms:ir.ui.view,arch_db:payment_signal.sale_order_portal_content_payment_signal
 msgid "Signal Quotation"
 msgstr "Señal Presupuesto"
 
