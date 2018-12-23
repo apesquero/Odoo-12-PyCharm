@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-17 15:35+0000\n"
-"PO-Revision-Date: 2018-12-17 15:35+0000\n"
+"POT-Creation-Date: 2018-12-23 16:50+0000\n"
+"PO-Revision-Date: 2018-12-23 16:50+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,46 +16,65 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: reports_manzano
-#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
-msgid "<span class=\"title text-uppercase\">Pro-Forma Invoice</span>"
-msgstr "<span class=\"title text-uppercase\">Factura Pro-Forma</span>"
+#: model_terms:ir.ui.view,arch_db:reports_manzano.external_layout_manzano
+msgid "<i class=\"fa fa-legal\" role=\"img\" aria-label=\"Fiscal number\" title=\"Fiscal number\"/>\n"
+"                        <span>CIF:</span>"
+msgstr ""
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
+msgid "<span>Pro-Forma Invoice</span>"
+msgstr "<span>Factura Pro-Forma</span>"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong class=\"amount_total text-uppercase\">Total (Tax Included)</strong>"
 msgstr "<strong class=\"amount_total text-uppercase\">Total (IVA Incluido)</strong>"
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>Address:</strong>"
 msgstr "<strong>Dirección:</strong>"
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
+msgid "<strong>Customer Code:</strong>"
+msgstr "<strong>Código de cliente:</strong>"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>Date:</strong>"
 msgstr "<strong>Fecha:</strong>"
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>E-mail:</strong>"
-msgstr "<strong>E-mail:</strong>"
+msgstr ""
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>Number:</strong>"
 msgstr "<strong>Número:</strong>"
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>Partner:</strong>"
 msgstr "<strong>Cliente:</strong>"
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>Phone:</strong>"
 msgstr "<strong>Tlf.:</strong>"
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>Salesperson:</strong>"
 msgstr "<strong>Comercial:</strong>"
@@ -66,9 +85,15 @@ msgid "<strong>Shipping:</strong>"
 msgstr "<strong>Entrega:</strong>"
 
 #. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
+msgid "<strong>Source:</strong>"
+msgstr "<strong>Fuente:</strong>"
+
+#. module: reports_manzano
+#: model_terms:ir.ui.view,arch_db:reports_manzano.report_invoice_document_inherit_sale_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano
 msgid "<strong>VAT:</strong>"
-msgstr "<strong>CIF/NIF:</strong>"
+msgstr "<strong>CIF:</strong>"
 
 #. module: reports_manzano
 #: model_terms:ir.ui.view,arch_db:reports_manzano.report_saleorder_document_manzano

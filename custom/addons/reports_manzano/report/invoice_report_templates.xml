@@ -1,8 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <template id="report_invoice_document_inherit_sale_manzano" inherit_id="account.report_invoice_document">
-        <xpath expr="//div/h2" position="attributes">
+        <xpath expr="//div[@class='page']/h2" position="attributes">
             <attribute name="class">title text-uppercase</attribute>
         </xpath>
+
+        <xpath expr="//div[@class='page']/h2/span[@t-field='o.number']" position="replace"/>
+
+        <xpath expr="//div[@class='page']/div[@class='row mt32 mb32']" position="replace">
+            <div class="container col-12" id="informations">
+                <div class="container row">
+                    <div id="column_left" class="col-6">
+                        <div t-if="o.number" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Number:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="o.number"/>
+                            </div>
+                        </div>
+
+                        <div t-if="o.date_invoice" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Date:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="o.date_invoice"/>
+                            </div>
+                        </div>
+
+                        <div class="col-auto" t-if="o.partner_id.ref" name="customer_code">
+                            <strong>Customer Code:</strong>
+                            <p t-field="o.partner_id.ref"/>
+                        </div>
+
+                        <div t-if="o.origin" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Source:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="o.origin"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="column_right" class="col-6">
+                        <div t-if="o.user_id.name" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Salesperson:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="o.user_id.name"/>
+                            </div>
+                        </div>
+                        <div t-if="o.user_id.phone or o.user_id.mobile" class="row">
+                            <div class="col-3 text-right">
+                                <strong>Phone:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <div t-if="o.user_id.phone">
+                                    <span class="fa fa-phone"/>
+                                    <span t-field="o.user_id.phone"/>
+                                </div>
+                                <div t-if="o.user_id.mobile">
+                                    <span class="fa fa-mobile"/>
+                                    <span t-field="o.user_id.mobile"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div t-if="o.user_id.email" class="row">
+                            <div class="col-3 text-right">
+                                <strong>E-mail:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <p class="email" t-field="o.user_id.email"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container col-12" id="informations_partner">
+                <div class="container row">
+                    <div id="column_left" class="col-6">
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>Partner:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="o.partner_id.name"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-right" t-if="o.partner_id.vat">
+                                <strong>VAT:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <span t-field="o.partner_id.vat"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>Address:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <div>
+                                    <span t-field="o.partner_id.street"/>
+                                    <span t-if="o.partner_id.doorway">-</span>
+                                    <span t-field="o.partner_id.doorway"/>
+                                    <span t-if="o.partner_id.floor or o.partner_id.floor">-</span>
+                                    <span t-field="o.partner_id.floor"/>
+                                    <span t-field="o.partner_id.letter"/>
+                                    <span t-if="o.partner_id.number_door">-</span>
+                                    <span t-field="o.partner_id.number_door"/>
+                                    <span t-if="o.partner_id.number_door" class="fa fa-bell"/>
+                                    <span t-if="o.partner_id.zip">-</span>
+                                    <span t-field="o.partner_id.zip"/>
+                                    <span t-if="o.partner_id.city">-</span>
+                                    <span t-field="o.partner_id.city"/>
+                                    <span t-if="o.partner_id.state_id">-</span>
+                                    <span t-field="o.partner_id.state_id"/>
+                                    <span t-if="o.partner_id.country_id">-</span>
+                                    <span t-field="o.partner_id.country_id"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="column_right" class="col-6">
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>Phone:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <div t-if="o.partner_id.phone">
+                                    <span class="fa fa-phone"/>
+                                    <span t-field="o.partner_id.phone"/>
+                                </div>
+                                <div t-if="o.partner_id.mobile">
+                                    <span class="fa fa-mobile"/>
+                                    <span t-field="o.partner_id.mobile"/>
+                                    <span t-if="o.partner_id.mobile2">-</span>
+                                    <span t-if="o.partner_id.mobile2" class="fa fa-mobile"/>
+                                    <span t-field="o.partner_id.mobile2"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 text-right">
+                                <strong>E-mail:</strong>
+                            </div>
+                            <div class="col-9 text-left">
+                                <p class="email" t-field="o.partner_id.email"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[@class='page']//table/thead/tr/th[1]" position="attributes">
+            <attribute name="style">width: 65%;</attribute>
+        </xpath>
+
+        <xpath expr="//div[@class='page']//table/thead/tr/th[6]" position="replace"/>
+
+        <xpath expr="//tbody[@class='invoice_tbody']//t/tr/t/td[6]" position="replace"/>
+
+        <xpath expr="//div[@id='total']/div" position="attributes">
+            <attribute name="t-attf-class">#{'col-7' if report_type != 'html' else 'col-sm-7 col-md-7'} ml-auto</attribute>
+        </xpath>
+
+        <xpath expr="//div[@id='total']//tr[2]" position="replace">
+            <tr class="border-black">
+                <td>
+                    <strong class="amount_total text-uppercase">Total (Tax Included)</strong>
+                </td>
+                <td class="text-right">
+                    <span class="amount_total" t-field="o.amount_total"/>
+                </td>
+            </tr>
+        </xpath>
+
     </template>
 </odoo>
