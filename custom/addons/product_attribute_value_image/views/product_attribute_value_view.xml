@@ -30,6 +30,9 @@
         <field name="inherit_id" ref="product.product_attribute_view_form"/>
         <field name="priority" eval="8"/>
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='type']" position="replace">
+                <field name="type"/>
+            </xpath>
             <xpath expr="//field[@name='value_ids']/tree/field[@name='name']" position="after">
                 <field name="image"/>
             </xpath>
