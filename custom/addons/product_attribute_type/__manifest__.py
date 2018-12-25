@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 {
-    'name': 'Product Attribute Value Image',
+    'name': 'Product Attribute Type',
     'version': "12.0.1.0.0",
     'author': 'Amaro Pesquero Rodríguez',
     'category': 'Sales Management',
@@ -9,6 +9,7 @@
                 ],
     'data': ['views/product_attribute_value_view.xml',
              'views/sale_product_configurator_templates.xml',
+             'data/product_attribute_data.xml',
              ],
     'installable': True,
     'application': False,

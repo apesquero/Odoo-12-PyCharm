@@ -20,6 +20,8 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='value_ids']/tree/field[@name='name']" position="after">
                 <field name="image"/>
+                <field name="min_range"/>
+                <field name="max_range"/>
             </xpath>
         </field>
     </record>
@@ -35,6 +37,8 @@
             </xpath>
             <xpath expr="//field[@name='value_ids']/tree/field[@name='name']" position="after">
                 <field name="image"/>
+                <field name="min_range"/>
+                <field name="max_range"/>
             </xpath>
         </field>
     </record>
