@@ -9,6 +9,10 @@
             <field name="name" position="after">
                 <field name="image" widget='image' class="o_field_list_image"/>
             </field>
+            <field name="html_color" position="after">
+                <field name="min_range"/>
+                <field name="max_range"/>
+            </field>
         </field>
     </record>
 

@@ -14,7 +14,8 @@
                 <ul t-att-data-attribute_id="variant_id.attribute_id.id" class="list-inline">
                     <t t-set="inc" t-value="0"/>
                     <div>
-                        <li t-foreach="variant_id.product_template_value_ids" t-as="value_id" t-attf-class="list-inline-image">
+                        <li t-foreach="variant_id.product_template_value_ids" t-as="value_id"
+                            t-attf-class="list-inline-image">
                             <label t-attf-class="css_attribute_color #{'active' if not inc else ''} #{'custom_value' if value_id.is_custom else ''} o_field_image">
                                 <span t-field="value_id.image"
                                       t-options='{"widget": "image", "alt-field": "name"}'>
@@ -32,6 +33,34 @@
 
                             </label>
                             <t t-set="inc" t-value="inc+1"/>
+                        </li>
+                    </div>
+                </ul>
+            </t>
+            <t t-if="variant_id.attribute_id.type == 'range'">
+                <ul t-att-data-attribute_id="variant_id.attribute_id.id" class="list-inline">
+                    <t t-set="inc" t-value="0"/>
+                    <div>
+                        <li t-foreach="variant_id.product_template_value_ids" t-as="value_id">
+                            <div class="css_quantity input-group oe_website_spinner" contenteditable="false">
+                                <span t-field="value_id.name"/>
+                                <div class="input-group-prepend">
+                                    <a class="btn btn-secondary"
+                                       aria-label="Remove one" title="Remove one">
+                                        <i class="fa fa-minus"></i>
+                                    </a>
+                                </div>
+                                <input type="text"
+                                       class="form-control quantity"
+                                       data-min="1"
+                                       value="1"/>
+                                <div class="input-group-append">
+                                    <a class="btn btn-secondary float_left"
+                                       aria-label="Add one" title="Add one">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                     </div>
                 </ul>
