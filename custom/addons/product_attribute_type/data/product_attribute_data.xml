@@ -4,7 +4,7 @@
 
         <record id="decimal_product_attribute" model="decimal.precision">
             <field name="name">Product Attribute</field>
-            <field name="digits">6</field>
+            <field name="digits">2</field>
         </record>
 
     </data>

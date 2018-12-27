@@ -42,8 +42,9 @@
                     <t t-set="inc" t-value="0"/>
                     <div>
                         <li t-foreach="variant_id.product_template_value_ids" t-as="value_id">
+                            <label class="control-label"
+                                   t-field="value_id.name"/>
                             <div class="css_quantity input-group oe_website_spinner" contenteditable="false">
-                                <span t-field="value_id.name"/>
                                 <div class="input-group-prepend">
                                     <a class="btn btn-secondary"
                                        aria-label="Remove one" title="Remove one">
@@ -51,9 +52,9 @@
                                     </a>
                                 </div>
                                 <input type="text"
-                                       class="form-control quantity"
+                                       class="form-control"
                                        data-min="1"
-                                       value="1"/>
+                                       t-att-value="value_id.min_range"/>
                                 <div class="input-group-append">
                                     <a class="btn btn-secondary float_left"
                                        aria-label="Add one" title="Add one">
@@ -61,6 +62,14 @@
                                     </a>
                                 </div>
                             </div>
+                            <div class="out-range-message alert alert-danger">
+                                <span>Min</span>
+                                <span t-field="value_id.min_range"/>
+                                <spam>cms - Max </spam>
+                                <span t-field="value_id.max_range"/>
+                                <spam>cms</spam>
+                            </div>
+
                         </li>
                     </div>
                 </ul>

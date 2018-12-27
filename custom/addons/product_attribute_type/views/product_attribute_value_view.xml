@@ -41,6 +41,7 @@
             </xpath>
             <xpath expr="//field[@name='value_ids']/tree/field[@name='name']" position="after">
                 <field name="image"/>
+                <field name="numeric_value"/>
                 <field name="min_range"/>
                 <field name="max_range"/>
             </xpath>
