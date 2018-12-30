@@ -34,4 +34,3 @@ class ProductTemplateAttributeValue(models.Model):
     max_range = fields.Float('Max',
                              digits=dp.get_precision('Product Attribute'),
                              related="product_attribute_value_id.max_range")
-
