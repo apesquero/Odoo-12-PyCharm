@@ -23,7 +23,7 @@
         <field name="priority" eval="8"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='value_ids']/tree/field[@name='name']" position="after">
-                <field name="image"/>
+                <field name="image" widget='image' class="o_field_list_image"/>
                 <field name="min_range"/>
                 <field name="max_range"/>
             </xpath>
@@ -40,7 +40,7 @@
                 <field name="type"/>
             </xpath>
             <xpath expr="//field[@name='value_ids']/tree/field[@name='name']" position="after">
-                <field name="image"/>
+                <field name="image" widget='image' class="o_field_list_image"/>
                 <field name="numeric_value"/>
                 <field name="min_range"/>
                 <field name="max_range"/>
@@ -54,7 +54,7 @@
         <field name="inherit_id" ref="product.product_template_attribute_value_view_tree"/>
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="image"/>
+                <field name="image" widget='image' class="o_field_list_image"/>
             </field>
         </field>
     </record>
