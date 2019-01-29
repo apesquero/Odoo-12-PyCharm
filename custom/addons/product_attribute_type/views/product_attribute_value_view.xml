@@ -65,7 +65,7 @@
         <field name="inherit_id" ref="product.product_template_attribute_value_view_form"/>
         <field name="arch" type="xml">
             <field name="name" position="after">
-                <field name="image" readonly="True"/>
+                <field name="image" widget='image' class="o_field_list_image"/>
             </field>
         </field>
     </record>
