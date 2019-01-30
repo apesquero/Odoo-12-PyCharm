@@ -16,7 +16,7 @@
         # 'views/supplier_attribute_value_views.xml',
         # 'views/inherited_product_supplier_info_views.xml',
         # 'views/inherited_product_attribute_value_views.xml',
-        # 'views/inherited_product_attribute_price_views.xml',
+        'views/product_attribute_views.xml',
         # 'views/inherited_sale_order_views.xml',
         # 'security/ir.model.access.csv',
     ],

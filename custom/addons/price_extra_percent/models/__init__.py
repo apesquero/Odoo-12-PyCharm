@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 
-# from . import inherited_product_attribute_value
-# from . import inherited_product_attribute_price
+from . import product_attribute
 # from . import inherited_product_product
 # from . import inherited_product_supplier_info
 # from . import inherited_sale_order_line
