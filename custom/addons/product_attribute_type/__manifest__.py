@@ -2,7 +2,7 @@
 {
     'name': 'Product Attribute Type',
     'version': "12.0.1.0.0",
-    'author': 'Amaro Pesquero Rodríguez',
+    'author': 'Amaro Pesquero',
     'category': 'Sales Management',
     'depends': ['product',
                 'sale',
