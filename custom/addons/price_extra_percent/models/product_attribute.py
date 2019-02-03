@@ -11,3 +11,6 @@ class ProductTemplateAttributeValue(models.Model):
                                         string='Price Extra Type',
                                         required=True,
                                         default='standard')
+
+    percentage = fields.Integer(string='Percent Extra Price',
+                                default=0)
