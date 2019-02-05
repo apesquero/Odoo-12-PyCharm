@@ -19,6 +19,7 @@
             <field name="price_extra" position="before">
                 <field name="price_extra_type"/>
                 <field name="percentage" class="oe_inline"/>
+                <field name="price_extra2"/>
             </field>
         </field>
     </record>
